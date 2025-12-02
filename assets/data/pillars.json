@@ -1,0 +1,49 @@
+[
+  {
+    "id": "academic",
+    "title": "Academic",
+    "emoji": "🎓",
+    "summary": "Skills, learning, and structured progress.",
+    "symptoms": ["Procrastination","Lack of goal clarity","Shallow practice"],
+    "actions": ["Set one week micro-goal","90-minute focused learning","Teach what you learn"]
+  },
+  {
+    "id": "spiritual",
+    "title": "Spiritual",
+    "emoji": "✨",
+    "summary": "Meaning, values, and ritual.",
+    "symptoms": ["Empty routine","No gratitude practice","Disconnected"],
+    "actions": ["5-min reflection","Daily gratitude","Join a small circle"]
+  },
+  {
+    "id": "financial",
+    "title": "Financial",
+    "emoji": "💰",
+    "summary": "Stability, planning, and freedom.",
+    "symptoms": ["Impulse buying","No buffer","Bill stress"],
+    "actions": ["Track spend 14 days","Automate small savings","Create $250 buffer"]
+  },
+  {
+    "id": "mental",
+    "title": "Mental",
+    "emoji": "🧠",
+    "summary": "Clarity, focus, and cognitive health.",
+    "symptoms": ["Brain fog","Easily distracted","Decision fatigue"],
+    "actions": ["Phone-free morning","Sleep hygiene","Time-blocking"]
+  },
+  {
+    "id": "emotional",
+    "title": "Emotional",
+    "emoji": "❤️",
+    "summary": "Regulation and relationship wellbeing.",
+    "symptoms": ["Mood swings","Numbing","Avoidance"],
+    "actions": ["Name emotions daily","4-4-8 breathing","Set one boundary"]
+  },
+  {
+    "id": "social",
+    "title": "Social",
+    "emoji": "👥",
+    "summary": "Connection, trust, belonging.",
+    "symptoms": ["Loneliness","Shallow ties","Avoiding events"],
+    "actions": ["Schedule one call","Practice active listening","Join a meetup"]
+  }]
