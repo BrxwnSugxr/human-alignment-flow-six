@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Mental Clarity Sprint",
+    "desc": "4 weeks — deep work tools & sleep hygiene",
+    "img": "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1400&auto=format&fit=crop",
+    "color": "#C6E9F5"
+  },
+  {
+    "title": "Financial Buffer Bootcamp",
+    "desc": "21-day saving & budget sprint",
+    "img": "https://images.unsplash.com/photo-1524763099890-7992a1a3b6f3?q=80&w=1400&auto=format&fit=crop",
+    "color": "#FFF3DA"
+  },
+  {
+    "title": "Connection Workshop",
+    "desc": "Improve conversation & boundaries",
+    "img": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1400&auto=format&fit=crop",
+    "color": "#EFE6FF"
+  }]
