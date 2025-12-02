@@ -1,0 +1,26 @@
+/* assets/css/style.css */
+
+/* Basic palette (custom CSS Variables */
+:root{
+    --cream:#fbf8f3;
+    --muted:#6b7280;
+    --gold:#d4a24a;
+    --accent:#0f172a;
+
+}
+
+body{
+    background-color: var(--cream);
+    color: var(--accent);
+}
+
+.carousel-wrap {
+    height: 320px;
+}
+.track {
+    display:flex; 
+    gap:18px;
+    align-items: stretch;
+    transition: transform .45s cubic-bezier(.2,.9,.3,1); will-change: transform;
+
+}
