@@ -14,6 +14,22 @@ body{
     color: var(--accent);
 }
 
+/* HERO (updated for GIF background */
+.hero {
+    min-height:60vh;
+    display:block;
+    position: relative;
+}
+
+.hero-gif-bg {
+    background-size: cover;
+    background-position: center;
+    /* img here */
+    background-image: url("../img/img.gif");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+}
+
 .carousel-wrap {
     height: 320px;
 }
