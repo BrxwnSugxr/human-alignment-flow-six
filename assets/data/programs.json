@@ -1,17 +1,20 @@
 [
   {
-    "title": "Mental Clarity Sprint",
-    "desc": "4 weeks: deep work tools & sleep hygiene",
+    "id": "mental-clarity",
+    "title": "Mental Clarity Sprint: Eon-Flow Mind Reset",
+    "desc": "A 28-day sprint fusing Stoic wisdom and modern neuroscience to halt cognitive overload and reclaim focus.",
     "img": "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1400&auto=format&fit=crop",
     "color": "#C6E9F5"
   },
   {
+    "id": "financial-buffer",
     "title": "Financial Buffer Bootcamp",
     "desc": "21-day saving & budget sprint",
     "img": "/human-alignment-flow/assets/img/bootcamp.png",
     "color": "#FFF3DA"
   },
   {
+    "id": "connection-workshop",
     "title": "Connection Workshop",
     "desc": "Improve conversation & boundaries",
     "img": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1400&auto=format&fit=crop",
