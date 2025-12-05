@@ -28,7 +28,7 @@ body{
     /* img here */
     background-image: url("../img/img.gif");
     background-repeat:no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
 .pillar-card{
