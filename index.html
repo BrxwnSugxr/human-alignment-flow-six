@@ -11,6 +11,7 @@
   </head>
 
   <body class="antialiased text-slate-800 bg-cream">
+    <!-- Header -->
     <header class="w-full sticky top-0 z-40 backdrop-blur bg-white/40 border-b">
       <div
         class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
@@ -57,13 +58,15 @@
       </div>
     </header>
 
+    <!-- Main -->
     <main>
+      <!-- Hero -->
       <section class="hero relative overflow-hidden hero-gif-bg">
         <div class="absolute inset-0 bg-black/50 z-0"></div>
 
         <div class="max-w-6xl mx-auto px-6 py-28 relative z-10">
           <div
-            class="mx-auto max-w-3xl text-center border-4 border-amber-500 p-8 rounded-xl bg-white/20 backdrop-blur-sm"
+            class="mx-auto max-w-3xl text-center border-4 border-amber-500 p-8 rounded-xl bg-white/12 backdrop-blur-sm"
           >
             <div
               class="inline-block px-3 py-1 rounded-full bg-white/20 text-xs text-white/90 font-semibold"
@@ -77,10 +80,8 @@
               Rebuild the six core elements of your life
             </h1>
             <p class="mt-4 text-lg text-white/90">
-              Find hidden imbalances, stop overcompensating,
-            </p>
-            <p class="mt-4 text-lg text-white/90">
-              Get a clear micro-plan fast.
+              Find hidden imbalances, stop overcompensating, and get a clear
+              micro-plan — fast.
             </p>
 
             <div class="mt-8 flex justify-center gap-4">
@@ -104,6 +105,7 @@
         </div>
       </section>
 
+      <!-- Elements -->
       <section id="elements" class="max-w-6xl mx-auto px-6 py-16">
         <div class="mb-6 text-center">
           <h2 class="text-3xl font-bold">The 6 Core Elements</h2>
@@ -119,6 +121,7 @@
         ></div>
       </section>
 
+      <!-- Testimonials -->
       <section class="max-w-6xl mx-auto px-6 py-8">
         <h3 class="text-2xl font-bold text-center mb-6">What our users say</h3>
         <div class="grid md:grid-cols-3 gap-6">
@@ -144,11 +147,15 @@
       </footer>
     </main>
 
+    <!-- DIAGNOSTIC MODAL (Selection -> Quiz) -->
     <div
       id="diagModal"
-      class="fixed inset-0 hidden items-center justify-center z-50 bg-black/60"
+      class="fixed inset-0 hidden items-center justify-center z-50"
     >
-      <div class="bg-white rounded-2xl max-w-3xl w-[95%] p-6 shadow-xl">
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div
+        class="bg-white rounded-2xl max-w-3xl w-[95%] p-6 shadow-xl relative z-10"
+      >
         <div class="flex items-center justify-between">
           <h3 id="diagTitle" class="text-lg font-bold">
             Quick Alignment Diagnostic
@@ -178,13 +185,14 @@
       </div>
     </div>
 
+    <!-- PILLAR DETAIL MODAL -->
     <div
       id="detailModal"
       class="fixed inset-0 hidden items-center justify-center z-50"
     >
       <div class="absolute inset-0 bg-black/50" id="detailBackdrop"></div>
       <div
-        class="bg-white rounded-2xl max-w-2xl w-[95%] p-6 shadow-xl relative z-10"
+        class="modal-inner bg-white rounded-2xl max-w-2xl w-[95%] p-6 shadow-xl relative z-10"
       >
         <div class="flex items-start justify-between">
           <div>
@@ -197,16 +205,17 @@
             </div>
             <p id="modalSummary" class="text-sm text-slate-600 mt-2"></p>
 
-            <div
-              id="modalScoreWrapper"
-              class="mt-4 p-3 bg-red-50 rounded hidden"
-            >
+            <div id="modalScoreWrapper" class="mt-4 p-3 rounded hidden">
               <div class="text-sm font-semibold">
                 Score:
                 <span id="modalScore" class="text-lg font-extrabold">--</span> /
                 100
               </div>
-              <div class="text-xs text-slate-500">
+              <div
+                id="modalScoreFeedback"
+                class="text-xs text-slate-700 mt-1"
+              ></div>
+              <div class="text-xs text-slate-500 mt-1">
                 This indicates your current alignment in the selected area.
               </div>
             </div>
@@ -234,7 +243,7 @@
                 class="px-4 py-2 rounded-md font-semibold"
                 style="background: #d4a24a; color: #071225"
               >
-                Coming Soon
+                Micro-Action Plan Coming Soon
               </button>
             </div>
           </div>

@@ -1,97 +1,83 @@
-/* assets/css/style.css */
-
-/* Basic palette (custom CSS Variables) */
 :root{
-    --cream:#fbf8f3;
-    --muted:#6b7280;
-    --gold:#d4a24a;
-    --accent:#0f172a;
-    --white:white;
-
+  --cream: #fbf8f3;
+  --muted: #6b7280;
+  --gold: #d4a24a;
+  --dark: #071225;
 }
 
-body{
-    background-color: var(--cream);
-    color: var(--accent);
+html,body{
+  height:100%;
+  background:var(--cream);
 }
 
-/* HERO (updated for GIF background) */
-.hero {
-    min-height:60vh;
-    display:block;
-    position: relative;
-}
-
+/* Hero background: local GIF file (use your GIF at this path) */
 .hero-gif-bg {
-    background-size: cover;
-    background-position: center;
-    /* img here */
-    background-image: url("../img/img.gif");
-    background-repeat:no-repeat;
-    /* background-attachment: fixed; */
+  --hero: url("/assets/images/hero.gif");
+  background-image: var(--hero);
+  background-size: cover;
+  background-position: center;
+  min-height: 64vh;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-.pillar-card{
-    background: var(--white);
-    border-radius: 14px;
-    padding: 18px;
-    box-shadow: 0 10px 30px rgba(16,24,40,0.04);
-    transition: transform .18s ease, box-shadow .18s ease;
-    cursor: pointer;
+/* subtle parallax-like slow motion */
+.hero-gif-bg::before{
+  content: "";
+  position: absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(2,6,23,0.18), rgba(2,6,23,0.38));
+  z-index: 0;
+  pointer-events:none;
 }
 
-.pillar-card:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 18px 45px rgba(16,24,40,0.08);
+/* Frosted card default */
+.bg-white\/12 {
+  background-color: rgba(255,255,255,0.12);
 }
 
-.carousel-wrap {
-    height: 320px;
+/* Pillar card base */
+.pillar-card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(16,24,40,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+  display:block;
+  width:100%;
+  text-align:left;
 }
-.track {
-    display:flex; 
-    gap:18px;
-    align-items: stretch;
-    transition: transform .45s cubic-bezier(.2,.9,.3,1); 
-    will-change: transform; /* Redundancy removed */
-}
-
-.slide{
-    min-width: 68%;
-    background: var(--white);
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 12px 30px rgba(16,24,40,0.06);
-    transition: transform .35s, filter .35s, opacity .35s;
-
+.pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(16,24,40,0.08);
 }
 
-.slide.side{
-    min-width: 24%;
-    transform: scale(.96);
-    filter: blur(4px) brightness(.9); /* TYPO FIX: blue -> blur */
-    opacity: .8;
+/* small text utilities */
+.muted { color: var(--muted); }
+
+/* Modal visuals */
+#diagModal .bg-white, #detailModal .bg-white {
+  max-height: calc(100vh - 120px);
+  overflow: auto;
 }
-/* responsive */
+
+/* CENTER THE PILLAR DETAIL MODAL CONTENT */
+#detailModal .modal-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* score status helpers */
+.bg-red-100 { background: #fee2e2; }
+.bg-amber-100 { background: #fff7ed; }
+.bg-green-100 { background: #ecfdf5; }
+.border-red-500 { border-left: 4px solid #ef4444 !important; }
+.border-amber-500 { border-left: 4px solid #d97706 !important; }
+.border-green-500 { border-left: 4px solid #10b981 !important; }
+
+/* small responsive tweaks */
 @media (max-width:900px){
-    .slide { min-width: 88%; }
-    .slide.side { display:none; }
-    .carousel-wrap { height: 420px; }
+  .hero-gif-bg { min-height: 50vh; padding-top: 28px; padding-bottom:28px; }
+  #selectionScreen { grid-template-columns: repeat(1, 1fr); }
 }
-
-/* carousel arrows (near image) */
-.carousel-arrow {
-    width:44px; height:44px; border-radius:999px; display:flex; align-items:center; justify-content:center;
-    background:white; box-shadow:0 10px 30px rgba(2,6,23,0.06); border: none;
-}
-
-
-/* modal tweaks */
-#diagModal, #detailModal { display:flex; align-items:center; justify-content:center; }
-#diagModal.hidden, #detailModal.hidden { display:none; }
-
-/* utility muted */
-.muted { color:var(--muted); }
-
-/* small helpers */
-.rounded-2xl { border-radius:1rem; }

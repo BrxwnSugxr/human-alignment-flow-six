@@ -1,22 +1,19 @@
 /* assets/js/app.js
-   - loads pillars data (programs/carousel functionality removed)
-   - renders pillars grid and handles modals
-   - implements the new 2-step targeted diagnostic flow
+   - Renders pillars from JSON
+   - Handles 2-step diagnostic
+   - Shows results and scoring feedback
 */
 
 const PILLARS_URL = "assets/data/pillars.json";
 
-// ----- CORE UTILITIES -----
+/* small helper to fetch JSON */
 async function fetchJSON(url) {
   const res = await fetch(url);
   if (!res.ok) throw new Error("Fetch error: " + url);
   return res.json();
 }
 
-// -------------------------------------------------------------------
-// ----- DATA: QUIZ SECTIONS (6 separate quizzes) -----
-// -------------------------------------------------------------------
-
+/* QUIZ sections (only used to render the 4-question quizzes) */
 const QUIZ_SECTIONS = [
   {
     id: "academic",
@@ -86,13 +83,10 @@ const QUIZ_SECTIONS = [
   },
 ];
 
-// -------------------------------------------------------------------
-// ----- MODAL FUNCTIONS -----
-// -------------------------------------------------------------------
-
+/* Modal functions */
 function openPillarModal(pillar, score = null) {
   document.getElementById("modalTitle").textContent = pillar.title;
-  document.getElementById("modalSummary").textContent = pillar.summary;
+  document.getElementById("modalSummary").textContent = pillar.summary || "";
   document.getElementById("modalEmoji").textContent = pillar.emoji || "";
   document.getElementById("modalSymptoms").innerHTML = (pillar.symptoms || [])
     .map((s) => `<li>${s}</li>`)
@@ -102,13 +96,41 @@ function openPillarModal(pillar, score = null) {
     .join("");
 
   const scoreWrap = document.getElementById("modalScoreWrapper");
-  if (score !== null) {
-    document.getElementById("modalScore").textContent = score;
+  const scoreEl = document.getElementById("modalScore");
+  const feedbackEl = document.getElementById("modalScoreFeedback");
+
+  // Reset wrapper classes
+  scoreWrap.className = "mt-4 p-3 rounded hidden";
+
+  if (typeof score === "number") {
+    scoreEl.textContent = score;
     scoreWrap.classList.remove("hidden");
+
+    // Determine status and message
+    let statusClass = "bg-amber-100 border-amber-500";
+    let message =
+      "Your alignment here is moderate. Small consistent steps will help.";
+
+    if (score < 50) {
+      statusClass = "bg-red-100 border-red-500";
+      message =
+        "⚠️ Area of Focus (RED). Immediate micro-actions recommended to stabilise this pillar.";
+    } else if (score >= 80) {
+      statusClass = "bg-green-100 border-green-500";
+      message =
+        "✅ Strong Foundation (GREEN). Keep maintaining this area and support your weaker pillars.";
+    }
+
+    // apply
+    scoreWrap.classList.add(...statusClass.split(" "));
+    feedbackEl.textContent = message;
   } else {
     scoreWrap.classList.add("hidden");
+    feedbackEl.textContent = "";
+    scoreEl.textContent = "--";
   }
 
+  // show modal
   document.getElementById("detailModal").classList.remove("hidden");
   document.body.style.overflow = "hidden";
 }
@@ -118,148 +140,147 @@ function closePillarModal() {
   document.body.style.overflow = "auto";
 }
 
-// -------------------------------------------------------------------
-// ----- HOME PAGE RENDERING -----
-// -------------------------------------------------------------------
-
+/* Render the pillars grid */
 function renderPillars(pillars) {
   const container = document.getElementById("pillarsGrid");
   container.innerHTML = "";
 
   pillars.forEach((p) => {
-    const el = document.createElement("button");
-    el.className = "pillar-card text-left pillar-card";
-    el.innerHTML = `
-    <div class="flex items-start gap-4">
-<div class="w-12 h-12 rounded-lg flex items-center justify-center text-xl" style="background:linear-gradient(135deg,#fff9ec,#fbeec1)">${
-      p.emoji
-    }</div>
-<div class="flex-1">
-<div class="font-semibold">${p.title}</div>
-<div class="text-sm muted mt-1">${p.summary}</div>
-<div class="text-xs text-slate-400 mt-3">Quick: ${p.actions
-      .slice(0, 2)
-      .join(" · ")}</div>
-</div>
-   </div>`;
-
-    el.addEventListener("click", () => openPillarModal(p));
-    container.appendChild(el);
+    const btn = document.createElement("button");
+    btn.className = "pillar-card text-left";
+    btn.innerHTML = `
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-lg flex items-center justify-center text-xl" style="background:linear-gradient(135deg,#fff9ec,#fbeec1)">${
+          p.emoji || ""
+        }</div>
+        <div class="flex-1">
+          <div class="font-semibold">${p.title}</div>
+          <div class="text-sm muted mt-1">${p.summary || ""}</div>
+          <div class="text-xs text-slate-400 mt-3">Quick: ${(p.actions || [])
+            .slice(0, 2)
+            .join(" · ")}</div>
+        </div>
+      </div>`;
+    btn.addEventListener("click", () => openPillarModal(p)); // open detail modal
+    container.appendChild(btn);
   });
 }
 
-// -------------------------------------------------------------------
-// ----- DIAGNOSTIC FLOW LOGIC -----
-// -------------------------------------------------------------------
-
+/* Render selection screen for diagnostic (step 1) */
 function renderSelectionScreen(pillars) {
   const container = document.getElementById("selectionScreen");
   container.innerHTML = "";
-
   pillars.forEach((p) => {
     const section = QUIZ_SECTIONS.find((q) => q.id === p.id);
     if (!section) return;
-
-    const button = document.createElement("button");
-    button.className =
-      "p-4 rounded-xl text-left shadow hover:shadow-lg transition bg-white";
-    button.innerHTML = `
-            <div class="text-xl mr-3">${p.emoji}</div>
-            <div class="flex-1">
-                <div class="font-bold text-slate-800">${p.title}</div>
-                <div class="text-sm text-slate-600">${
-                  p.diag_prompt || p.summary
-                }</div> 
-            </div>
-            <div class="text-xl text-amber-500 ml-auto"></div>
-        `;
-
-    button.addEventListener("click", () => startElementQuiz(section.id));
-    container.appendChild(button);
+    const b = document.createElement("button");
+    b.className =
+      "w-full flex items-center justify-start p-3 border-b-2 border-gray-100 hover:bg-amber-50 transition text-left rounded";
+    b.innerHTML = `<div class="text-2xl mr-3">${p.emoji || ""}</div>
+                   <div class="flex-1">
+                     <div class="font-bold text-slate-800">${p.title}</div>
+                     <div class="text-sm text-slate-600">${
+                       p.summary || ""
+                     }</div>
+                   </div>
+                   <div class="text-xl text-amber-500 ml-auto">&rarr;</div>`;
+    b.addEventListener("click", () => startElementQuiz(section.id));
+    container.appendChild(b);
   });
 }
 
+/* Start quiz for one element (step 2) */
 function startElementQuiz(elementId) {
-  const section = QUIZ_SECTIONS.find((q) => q.id === elementId);
+  const section = QUIZ_SECTIONS.find((s) => s.id === elementId);
   if (!section) return;
 
-  // 1. Hide selection screen, show quiz form
   document.getElementById("selectionScreen").classList.add("hidden");
   document.getElementById("diagForm").classList.remove("hidden");
   document.getElementById("diagSubmitArea").classList.remove("hidden");
 
-  // 2. Update modal header
   document.getElementById(
     "diagTitle"
   ).textContent = `${section.title} Diagnostic`;
   document.getElementById(
     "diagSubtitle"
-  ).innerHTML = `Rate your current state (1-low to 5-high). We will generate your micro-plan based on this **${section.title}** quiz.`;
+  ).innerHTML = `Rate your current state (1 low — 5 high). This short ${section.title} quiz will generate your micro-plan.`;
 
-  // 3. Render only the questions for the selected element
   const form = document.getElementById("diagForm");
-  form.innerHTML = ""; // Clear previous content
+  form.innerHTML = "";
+  // hidden input for element id
+  const hidden = document.createElement("input");
+  hidden.type = "hidden";
+  hidden.name = "elementId";
+  hidden.value = section.id;
+  form.appendChild(hidden);
 
   section.questions.forEach((q, i) => {
     const row = document.createElement("div");
     row.className =
       "bg-white/80 p-3 rounded flex items-start justify-between gap-3 border-b";
-    row.innerHTML = `
-            <div class="text-sm">${q}</div>
-            <div class="flex items-center gap-2">
-                <input type="hidden" name="elementId" value="${section.id}">
-                <select name="q${i}" class="rounded border px-2 py-1 text-sm bg-white">
-                    <option value="1">1</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5</option>
-                </select>
-            </div>
-        `;
+    row.innerHTML = `<div class="text-sm">${q}</div>
+      <div class="flex items-center gap-2">
+        <select name="q${i}" class="rounded border px-2 py-1 text-sm bg-white">
+          <option value="1">1</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+      </div>`;
     form.appendChild(row);
   });
 }
 
-function submitDiagnostic() {
+/* Submit quiz, compute score and show results */
+async function submitDiagnostic() {
   const form = document.getElementById("diagForm");
-
-  // Get the ID of the element being quizzed
-  const elementId = form.querySelector('input[name="elementId"]').value;
-
-  // Get scores only from the select inputs present (4 questions)
-  const values = Array.from(form.querySelectorAll("select")).map((s) =>
-    Number(s.value)
-  );
-
-  const perPillar = values.length;
-
+  // ensure form exists and has hidden elementId
+  const elHidden = form.querySelector('input[name="elementId"]');
+  if (!elHidden) {
+    console.error("No elementId found in the form. Did you start the quiz?");
+    return;
+  }
+  const elementId = elHidden.value;
+  const selects = Array.from(form.querySelectorAll("select"));
+  if (selects.length === 0) {
+    console.error("No answers found. Ensure quiz rendered.");
+    return;
+  }
+  const values = selects.map((s) => Number(s.value));
   const sum = values.reduce((a, b) => a + b, 0);
+  const perPillar = values.length;
   const score = Math.round((sum / (perPillar * 5)) * 100);
 
-  // Find the full pillar data based on the ID
-  fetchJSON(PILLARS_URL).then((pillars) => {
-    const weakest = pillars.find((p) => p.id === elementId);
-
-    if (weakest) {
-      document.getElementById("diagModal").classList.add("hidden");
-      // Open the result modal showing the selected pillar's details and its calculated score
-      openPillarModal(weakest, score);
+  try {
+    const pillars = await fetchJSON(PILLARS_URL);
+    const pillar = pillars.find((p) => p.id === elementId);
+    if (!pillar) {
+      console.error("Pillar not found for id:", elementId);
+      return;
     }
-  });
+    document.getElementById("diagModal").classList.add("hidden");
+    // show detail modal with score
+    openPillarModal(pillar, score);
+
+    // reset selection screen state for next time
+    // (so closing the modal means user can start again)
+    document.getElementById("selectionScreen").classList.remove("hidden");
+    document.getElementById("diagForm").classList.add("hidden");
+    document.getElementById("diagSubmitArea").classList.add("hidden");
+    document.getElementById("diagTitle").textContent =
+      "Quick Alignment Diagnostic";
+    document.getElementById("diagSubtitle").textContent =
+      "First, select the element you want to focus on for your 5-minute quiz.";
+  } catch (err) {
+    console.error("Error during submitDiagnostic:", err);
+  }
 }
 
-// -------------------------------------------------------------------
-// ----- INITIALIZATIONS AND EVENT WIRING -----
-// -------------------------------------------------------------------
-
+/* Init and wiring */
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const [pillars] = await Promise.all([fetchJSON(PILLARS_URL)]);
-
-    // Render the elements grid on the homepage
+    const pillars = await fetchJSON(PILLARS_URL);
     renderPillars(pillars);
-
-    // RENDER: Quiz Selection Screen
     renderSelectionScreen(pillars);
 
-    // WIRE: Diagnostic Modal Open (CTA buttons)
+    // wire ctas
     const openDiag = () => {
       document.getElementById("diagModal").classList.remove("hidden");
       document.body.style.overflow = "hidden";
@@ -268,12 +289,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("startBtn").addEventListener("click", openDiag);
     document.getElementById("startMobile").addEventListener("click", openDiag);
 
-    // WIRE: Diagnostic Modal Close/Submit
+    // close diag
     document.getElementById("closeDiag").addEventListener("click", () => {
       document.getElementById("diagModal").classList.add("hidden");
       document.body.style.overflow = "auto";
-
-      // RESET: Important for new flow - reset to selection screen on close
+      // reset selector state
       document.getElementById("selectionScreen").classList.remove("hidden");
       document.getElementById("diagForm").classList.add("hidden");
       document.getElementById("diagSubmitArea").classList.add("hidden");
@@ -282,12 +302,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       document.getElementById("diagSubtitle").textContent =
         "First, select the element you want to focus on for your 5-minute quiz.";
     });
+
+    // submit
     document.getElementById("submitDiag").addEventListener("click", (e) => {
       e.preventDefault();
       submitDiagnostic();
     });
 
-    // WIRE: Pillar Detail Modal Close
+    // close detail modal
     document
       .getElementById("closeModal")
       .addEventListener("click", closePillarModal);
@@ -295,6 +317,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       .getElementById("detailBackdrop")
       .addEventListener("click", closePillarModal);
   } catch (err) {
-    console.error("Initialization Error:", err);
+    console.error("Init error:", err);
   }
 });
