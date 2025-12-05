@@ -6,12 +6,16 @@
     <title>Methodology — Flow Six Foundation</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="stylesheet" href="assets/css/methodology.css" />
   </head>
 
-  <body class="font-sans antialiased">
-    <div id="mobile-menu-backdrop" onclick="closeMobileMenu()"></div>
+  <body class="font-sans antialiased bg-cream">
+    <!-- mobile backdrop -->
+    <div
+      id="mobile-menu-backdrop"
+      onclick="closeMobileMenu()"
+      class="hidden"
+    ></div>
 
     <header
       class="py-4 bg-white/95 backdrop-blur sticky top-0 z-50 border-b border-gray-200"
@@ -23,7 +27,9 @@
           id="menu-toggle"
           class="lg:hidden p-2 rounded-md hover:bg-gray-100"
           onclick="openMobileMenu()"
+          aria-label="Open menu"
         >
+          <!-- simple menu icon -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
@@ -44,7 +50,7 @@
           Flow Six Methodology
         </div>
 
-        <nav class="text-sm">
+        <nav class="text-sm hidden lg:flex items-center gap-6">
           <a
             href="index.html"
             class="text-amber-800 hover:text-slate-800 flex items-center gap-1 transition"
@@ -69,6 +75,7 @@
       </div>
     </header>
 
+    <!-- Mobile Drawer -->
     <div id="mobile-menu-drawer" class="lg:hidden border-r border-gray-200">
       <div class="p-4 border-b">
         <div class="font-bold text-gray-700">Framework Index</div>
@@ -80,21 +87,66 @@
     </div>
 
     <main id="main-content-wrapper" class="w-full max-w-7xl mx-auto">
-      <div
+      <!-- Left: Sidebar -->
+      <aside
         id="framework-list-col"
         class="w-[320px] shrink-0 bg-white border-r border-gray-200 hidden lg:block"
       >
-        <div id="framework-list" class="flex flex-col"></div>
-      </div>
+        <div class="p-4 border-b">
+          <div class="font-semibold">Frameworks</div>
+          <div class="text-xs muted mt-1">
+            Select to read: simple → process → advanced
+          </div>
+        </div>
+        <nav id="framework-list" class="flex flex-col overflow-y-auto"></nav>
+      </aside>
 
-      <div id="framework-detail-wrapper" class="flex-1 bg-white">
+      <!-- Right: Detail -->
+      <section id="framework-detail-wrapper" class="flex-1 bg-white">
         <div id="framework-detail" class="max-w-4xl mx-auto p-4 lg:p-8">
-          <h1 class="text-3xl font-extrabold mb-2">The Flow Six Foundation</h1>
-          <p class="muted mb-6">
-            Our model synthesizes principles from these established
-            psychological, spiritual, and performance frameworks. Use this
-            reference for research, study, or advanced application.
-          </p>
+          <!-- Hero (subtle gold gradient wash) -->
+          <div class="hero-compact rounded-xl p-6 mb-6">
+            <div class="flex items-start gap-4">
+              <div class="hero-icon">
+                <!-- subtle academic SVG badge -->
+                <svg
+                  width="44"
+                  height="44"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden
+                >
+                  <path
+                    d="M12 2l8 4-8 4-8-4 8-4z"
+                    stroke="#7a5a1e"
+                    stroke-width="1.2"
+                    fill="#fffaf0"
+                  />
+                  <path
+                    d="M4 10v6c0 2.2 3.6 4 8 4s8-1.8 8-4v-6"
+                    stroke="#7a5a1e"
+                    stroke-width="1.1"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="text-lg font-bold">The Flow Six Foundation</div>
+                <div class="text-sm muted mt-1 max-w-xl">
+                  A concise, evidence-informed reference synthesizing key
+                  psychological, coaching and behavioural frameworks. Choose a
+                  framework to view simple explanation, practical process steps,
+                  and academic notes.
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 flex gap-3">
+              <a href="index.html" class="btn-ghost">Back to homepage</a>
+              <button class="btn-cta" onclick="scrollToFirstFramework()">
+                Jump to first framework
+              </button>
+            </div>
+          </div>
 
           <h2 id="detailTitle" class="text-2xl font-bold mb-2">
             Select a Framework
@@ -104,7 +156,7 @@
             class="text-sm font-semibold text-amber-700 mb-4"
           ></div>
 
-          <div id="modelStatusTag"></div>
+          <div id="modelStatusTag" class="mb-4"></div>
 
           <div id="levelTabs" class="border-b border-gray-200 mb-6 flex gap-8">
             <button data-level="simple" class="tab-button active pb-2">
@@ -120,8 +172,8 @@
 
           <div id="contentSimple" class="text-base text-gray-700 mb-6">
             <p>
-              Click any framework on the left (or the menu icon above on mobile)
-              to select a model.
+              Click any framework on the left (or open the menu on mobile) to
+              select a model.
             </p>
           </div>
           <div
@@ -141,7 +193,7 @@
             <div id="relevanceTags" class="flex flex-wrap gap-2"></div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer class="py-4 border-t bg-white border-gray-200">
