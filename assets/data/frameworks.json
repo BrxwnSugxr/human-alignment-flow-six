@@ -1,0 +1,268 @@
+[
+  {
+    "id": "maslow",
+    "title": "Maslow's Hierarchy of Needs",
+    "focus": "Motivational Psychology",
+    "summary": "A five-tier model of human needs, from basic physiological requirements to self-actualization.",
+    "relevance": ["Spiritual", "Emotional", "Physical"],
+    "model_status": {
+      "status": "Revised (Transcendence)",
+      "class": "status-revised"
+    },
+    "easy_explanation": "Think of this like a <strong>video game</strong> where you have to unlock levels. You can't reach the 'boss level' (optimizing your life) until your basic needs like food, rest, and safety (Levels 1 & 2) are stable. Our Flow Six approach ensures the lower needs are always prioritized first.",
+    "process_application": "The hierarchy consists of <strong>Deficiency Needs (D-Needs)</strong>—Physiological, Safety, Love/Belonging, Esteem—and <strong>Growth Needs (B-Needs)</strong>—Self-Actualization. <p><strong>Case Use: Student Life:</strong> If a student is pulling all-nighters (undermining Physiological Needs) and has mounting debt (undermining Safety Needs), they will likely experience burnout and fail to achieve Esteem and Self-Actualization (good grades).</p> <strong>Application Steps:</strong> <ol><li>Identify the lowest unfulfilled D-Need (e.g., chronic sleep debt).</li><li>Prioritize actions (Flow Six micro-steps) to stabilize that level.</li><li>Only once stable, progress to satisfying higher needs (e.g., seeking purpose or advanced knowledge).</li></ol>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 1: DIAGNOSIS & READINESS</div><p>Maslow's later revisions included <strong>Transcendence</strong> (beyond self-actualization). <strong>Clinical Note:</strong> Failure to meet Deficiency Needs often leads to psychopathology or chronic anxiety. <ul><li>Example for HR: A company cannot expect high self-actualization (innovation) from employees if safety needs (job insecurity) are not met.</li></ul>"
+  },
+  {
+    "id": "ttm",
+    "title": "Transtheoretical Model (TTM)",
+    "focus": "Behavioral Change Psychology",
+    "summary": "A model describing the stages a person moves through when acquiring a new healthy behavior or quitting an unhealthy one.",
+    "relevance": ["All Pillars: Readiness"],
+    "model_status": {
+      "status": "Current/Widely Used",
+      "class": "status-current"
+    },
+    "easy_explanation": "This explains why New Year's resolutions fail. Change isn't instant; it happens in five steps, from 'I'm not ready yet' to 'I'm living it now.' Identifying your stage is the first step.",
+    "process_application": "The five core stages are: <ol><li><strong>Pre-contemplation:</strong> Not yet aware of the problem.</li><li><strong>Contemplation:</strong> Thinking about changing in the next 6 months.</li><li><strong>Preparation:</strong> Planning to change within 30 days (e.g., taking the Flow Six Diagnostic).</li><li><strong>Action:</strong> Actively implementing the new behavior.</li><li><strong>Maintenance:</strong> Sustaining the change for over 6 months.</li></ol> <p><strong>Case Use (Financial):</strong> A professional realizing debt is a problem (Contemplation) then commits to tracking expenses and reducing impulse buys (Preparation). The Flow Six diagnostic helps gauge readiness and provides appropriate micro-steps for the user's current stage.</p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 1: DIAGNOSIS & READINESS</div><p>TTM is integrated with 10 Processes of Change (e.g., Consciousness Raising, Self-Reevaluation). <ul><li>Clinical Application: Therapists tailor interventions (e.g., motivational interviewing) specifically to the client's current stage, making treatment more efficient.</li><li>Synthesis: Used with the Wheel of Life to determine if a client is merely aware of an imbalance (Contemplation) or ready to act (Preparation).</li></ul>"
+  },
+  {
+    "id": "wheel",
+    "title": "The Wheel of Life",
+    "focus": "Coaching Framework",
+    "summary": "A visual tool to assess balance across key life areas. It serves as the visual inspiration for our six element assessment.",
+    "relevance": ["All Pillars"],
+    "model_status": {
+      "status": "Static/Coaching Tool",
+      "class": "status-historic"
+    },
+    "easy_explanation": "Imagine your life is a bicycle wheel. If some sections (like finance or health) are flat or missing spokes, the wheel won't roll smoothly. This model helps you identify those uneven parts to get your life 'rolling' again.",
+    "process_application": "<strong>Steps:</strong> <ol><li>Draw a circle and divide it into 8 sections (or 6 for Flow Six).</li><li>Label each section (Health, Career, etc.).</li><li>Rate your current satisfaction (0 = center, 10 = edge) in each slice.</li><li>Connect the dots. The resulting shape (often wobbly) visually highlights the areas needing immediate attention.</li></ol> <p><strong>Case Use: Imbalance Diagnosis:</strong> A professional rates 'Career' as 9/10 and 'Relationships' as 3/10. The visualization immediately prompts the question: 'How is your pursuit of career success creating friction in your home life, and what trade-offs must you make?'</p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 1: DIAGNOSIS & READINESS</div><p>The Wheel is a <strong>Gestalt</strong> tool primarily used in the first stage of coaching for <strong>awareness and discovery</strong>. <ul><li>Synthesis: The Flow Six diagnostic acts as a numeric Wheel of Life, quickly identifying the lowest-scoring 'spoke' to move the user into the Preparation or Action stage of TTM.</li></ul>"
+  },
+  {
+    "id": "8dimen",
+    "title": "8 Dimensions of Wellness",
+    "focus": "US Health System",
+    "summary": "A highly comprehensive model including Emotional, Intellectual, Physical, Financial, etc.",
+    "relevance": ["All Pillars"],
+    "model_status": {
+      "status": "Current/Widely Used (SAMHSA)",
+      "class": "status-current"
+    },
+    "easy_explanation": "A broad health concept reminding us that wellness isn't just physical—it includes intellectual (Academic), occupational, and environmental factors. We took the most active, changeable areas to create our six core pillars.",
+    "process_application": "The eight dimensions are: Emotional, Intellectual, Social, Spiritual, Environmental, Occupational, Physical, and Financial. <strong>Application:</strong> Self-assess each dimension (like the Wheel of Life). <p><strong>Case Use: Campus Wellness:</strong> A university wellness program uses this framework to ensure student services offer holistic support, providing workshops on Financial Literacy, Intellectual stimulation, and Environmental stewardship, not just traditional physical health.</p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 1: DIAGNOSIS & READINESS</div><p>The SAMHSA model emphasizes that recovery involves balancing eight interdependent areas. <ul><li>Key Differentiator: Our model deliberately collapses 'Occupational' and 'Environmental' into the core six to maintain focus on internal, actionable changes, simplifying the model for broad application.</li></ul>"
+  },
+  {
+    "id": "com-b",
+    "title": "COM-B Model",
+    "focus": "Behavioral Science & Intervention Design",
+    "summary": "Behavior (B) occurs when three factors are present: Capability, Opportunity, and Motivation.",
+    "relevance": ["Mental", "Financial", "Academic"],
+    "model_status": {
+      "status": "Current/Gold Standard",
+      "class": "status-current"
+    },
+    "easy_explanation": "The simplest way to troubleshoot a habit failure. If you fail, ask: Did I have the <strong>Capability</strong> (skill)? Did I have the <strong>Opportunity</strong> (time/resources)? Was I <strong>Motivated</strong>?",
+    "process_application": "To promote any Flow Six micro-step, all three must be present. <ul><li><strong>Capability:</strong> Does the user know *how* to do the task? (e.g., Do they know *how* to budget?).</li><li><strong>Opportunity:</strong> Is the environment supportive? (e.g., Is their office quiet enough for deep work?).</li><li><strong>Motivation:</strong> Is the reward worth the effort? (e.g., Are they tracking progress to feel successful?).</li></ul> <p><strong>Case Use (Academic):</strong> A student wants to study (Motivation) but can't focus (lacks Psychological Capability) in a noisy dorm (lacks Physical Opportunity). The solution targets C and O, not just M.</p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 2: ACTION & EXECUTION</div><p>COM-B is the core of the **Behaviour Change Wheel**, used by governments and public health organizations to design policies. <ul><li>Application: Interventions derived from COM-B include training (Capability), restructuring the environment (Opportunity), and utilizing incentives (Motivation).</li></ul>"
+  },
+  {
+    "id": "fogg",
+    "title": "Fogg Behavior Model (FBM)",
+    "focus": "Habit Formation & Design",
+    "summary": "Behavior (B) requires Motivation (M), Ability (A), and a Prompt (P) to align at the same moment.",
+    "relevance": ["Mental", "Financial", "Academic"],
+    "model_status": {
+      "status": "Current/Design Staple",
+      "class": "status-current"
+    },
+    "easy_explanation": "The Fogg Model shows that behaviors happen when M.A.P. aligns. If you lack <strong>Motivation</strong>, the task must be made extremely <strong>Able</strong> (easy). If Ability is low, you need a strong <strong>Prompt</strong> at the right time.",
+    "process_application": "<strong>Application:</strong> To ensure a micro-step is successful, focus on the easiest levers: <ol><li><strong>Increase Ability:</strong> Simplify the behavior (e.g., do 2 push-ups instead of 20).</li><li><strong>Optimize Prompt Timing:</strong> Connect the new habit to an existing routine (e.g., 'After I turn off my alarm [Prompt], I will drink water [Action]').</li><li><strong>Case Use (Financial):</strong> A person wants to save $100 (High Motivation). Instead of complex budgeting, they set up auto-transfer of $1 per day (High Ability) upon receiving their paycheck (Timed Prompt).</li></ol>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 2: ACTION & EXECUTION</div><p>FBM visualizes M and A on an 'Action Line'; behaviors below the line need a Spark (high motivation) or Facilitator (high ability) Prompt. <ul><li>Synthesis: This is the micro-execution layer that breaks down the actions determined by the **GROW** model into 'tiny habits' that overcome inertia.</li></ul>"
+  },
+  {
+    "id": "cbt",
+    "title": "Cognitive Behavioural Model (CBT)",
+    "focus": "Clinical Psychology",
+    "summary": "The triangle model connecting Thoughts, Feelings, and Behaviors. We use simplified CBT principles to help users reframe negative thought patterns.",
+    "relevance": ["Mental", "Emotional"],
+    "model_status": {
+      "status": "Current/Gold Standard",
+      "class": "status-current"
+    },
+    "easy_explanation": "CBT teaches you that your feelings and actions are mostly controlled by your thoughts. If you change the thought (e.g., 'I can learn this' instead of 'I'm bad at this'), your feelings and actions will change too. It's about retraining your internal voice.",
+    "process_application": "<strong>The Triangle:</strong> An event triggers a Thought, which causes a Feeling, leading to a Behaviour. <strong>Application:</strong> <ol><li>Use a 'Thought Record' diary to track the sequence.</li><li>Identify the automatic negative Thought ('I will fail the exam').</li><li>Challenge the thought with evidence and create a balanced response ('I studied hard, I can try my best.').</li></ol> <p><strong>Case Use: Procrastination:</strong> When a student feels anxious about starting an assignment (Feeling), the automatic thought is often 'This is too hard; I'll fail' (Thought), leading to checking social media (Behaviour). CBT intervenes by challenging the thought: 'What is one step I can successfully complete right now?'</p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 2: ACTION & EXECUTION</div><p>CBT focuses on <strong>Cognitive Restructuring</strong> designed to challenge <strong>Cognitive Distortions</strong> (e.g., all-or-nothing thinking, catastrophizing). <ul><li>Workplace Example: Using the <strong>STOP</strong> method to interrupt the cycle between a trigger (stressful email) and an impulsive, emotional response.</li></ul>"
+  },
+  {
+    "id": "eisenhower",
+    "title": "The Eisenhower Matrix",
+    "focus": "Decision-making & Productivity",
+    "summary": "A system for prioritizing tasks based on urgency and importance. A core tool for managing the Mental and Academic workload.",
+    "relevance": ["Mental", "Academic"],
+    "model_status": {
+      "status": "Static/Classic Tool",
+      "class": "status-historic"
+    },
+    "easy_explanation": "This tool helps you stop doing the 'urgent but unimportant' things. You sort tasks into four boxes: Do it (Urgent/Important), Schedule it (Important/Not Urgent), Delegate it (Urgent/Not Important), and Delete it (Not Urgent/Not Important).",
+    "process_application": "<strong>The Quadrants:</strong> <ul><li>Q1: Crisis (Urgent/Important) - <strong>DO</strong>.</li><li>Q2: Planning (Not Urgent/Important) - <strong>SCHEDULE</strong>.</li><li>Q3: Interruptions (Urgent/Not Important) - <strong>DELEGATE</strong>.</li><li>Q4: Distractions (Not Urgent/Not Important) - <strong>DELETE</strong>.</li></ul> <strong>Application:</strong> Spend most Mental and Academic time in Q2 (planning/skill-building) to minimize Q1 crises. <p><strong>Case Use: Q2 Focus:</strong> A professional schedules 2 hours per week for 'skill development' (Important/Not Urgent) to avoid the Q1 crisis of being unqualified for a future promotion.</p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 2: ACTION & EXECUTION</div><p>Crucial for shifting from a <strong>reactive</strong> to a <strong>proactive</strong> mindset. <ul><li>The Goal is to maximize time in the <strong>Important/Not Urgent</strong> quadrant (long-term planning) to prevent these tasks from later spiraling into the crisis-management Q1 quadrant.</li></ul>"
+  },
+  {
+    "id": "burners",
+    "title": "The Four Burners Theory",
+    "focus": "Productivity Psychology",
+    "summary": "Life has four 'burners' (Health, Work, Family, Friends) and you can't keep them all on high simultaneously. Used to explain the concept of imbalance.",
+    "relevance": ["Social", "Emotional", "Academic"],
+    "model_status": {
+      "status": "Modern Analogy/Critique",
+      "class": "status-revised"
+    },
+    "easy_explanation": "Imagine your energy is divided between four stove burners: Work, Health, Family, and Friends. You must turn one or two down to focus energy on the others. You can't run them all on high forever without running out of gas!",
+    "process_application": "<strong>Application:</strong> <ol><li>Identify your current four burners.</li><li>Assign each a value (Low, Medium, High) for the current quarter.</li><li>The goal is to make <strong>deliberate trade-offs</strong> (e.g., turning down Social for a month to boost Academic focus) rather than collapsing from trying to maintain everything simultaneously.</li></ol> <p><strong>Case Use: Exam Period:</strong> A student sets 'Academic' (Work) to High. They must consciously lower 'Friends' (Social) and accept simpler meals instead of gym time (Health) for four weeks to manage resources effectively.</p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 2: ACTION & EXECUTION</div><p>This analogy is used to discuss <strong>resource allocation</strong> and <strong>opportunity cost</strong>, challenging the myth of perfect balance. <ul><li>Key Insight: It prompts the deliberate practice of <strong>sequencing</strong>—deciding which burner to temporarily lower to avoid burnout.</li></ul>"
+  },
+  {
+    "id": "grow",
+    "title": "The GROW Coaching Model",
+    "focus": "Professional Coaching & HR",
+    "summary": "Goal, Reality, Options, Will (Action). A structured process used worldwide to achieve goals. We adapt this model for the weekly micro-action setting in all pillars.",
+    "relevance": ["Academic", "Mental", "Financial"],
+    "model_status": {
+      "status": "Current/Gold Standard",
+      "class": "status-current"
+    },
+    "easy_explanation": "It's a simple, four-step map for solving any problem: <strong>G</strong>oal (Where are we going?), <strong>R</strong>eality (Where are we now?), <strong>O</strong>ptions (How can we get there?), and <strong>W</strong>ill (What's the first step?). It turns big dreams into concrete tasks.",
+    "process_application": "<strong>Process Steps:</strong> <ol><li><strong>G (Goal):</strong> Define specific, measurable outcome (S.M.A.R.T.).</li><li><strong>R (Reality):</strong> Explore the current situation without judgment (What, When, Who? Why hasn't it worked yet?).</li><li><strong>O (Options):</strong> Brainstorm all possible paths (Quantity over Quality, eliminate constraints).</li><li><strong>W (Will):</strong> Commit to the first three actions (micro-steps).</li></ol> <p><strong>Case Use: Career Transition:</strong> A professional sets a goal (G: Get a senior role in a new industry). They assess their reality (R: Lacks specific certification and has limited network). They brainstorm options (O: Take evening course, find a mentor, write specific articles). They commit to the Will (W: Enroll in a course by Friday).</p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 3: DEEP GOAL SETTING</div><p>GROW is a non-directive, solution-focused model. The <strong>Reality</strong> stage is the most critical, using <strong>Socratic questioning</strong> to challenge assumptions and internal obstacles. <ul><li>HR Application: Managers use GROW to mentor employees to find internal solutions during performance reviews, rather than simply receiving instructions.</li></ul>"
+  },
+  {
+    "id": "oskar",
+    "title": "The OSKAR Coaching Model",
+    "focus": "Solution-Focused Coaching",
+    "summary": "Outcome, Scaling, Know-how, Affirm/Action, Review. Focuses on leveraging past success and identifying internal resources.",
+    "relevance": ["Emotional", "Academic", "Social"],
+    "model_status": {
+      "status": "Current/Alternative",
+      "class": "status-current"
+    },
+    "easy_explanation": "OSKAR helps you beat self-doubt. Instead of focusing on problems, you focus on past successes (Know-how) and scale those up. It's about finding what works and doing more of it.",
+    "process_application": "<strong>Process Steps:</strong> <ol><li><strong>O (Outcome):</strong> Define the desired future state (The Vision).</li><li><strong>S (Scaling):</strong> Rate current progress (1-10). What does a '3' look like?</li><li><strong>K (Know-how):</strong> When have you achieved a score higher than 3? What skills did you use?</li><li><strong>A (Affirm/Action):</strong> Affirm the client’s skills (Know-how) and commit to the next small action.</li><li><strong>R (Review):</strong> Follow up on the scaling score and know-how.</li></ol> <p><strong>Case Use (Academic):</strong> A student rates their focus as 2/10. When asked about a time they focused well (Know-how), they recall 'using the library and headphones.' The action is immediately committing to using the library next time.</p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 3: DEEP GOAL SETTING</div><p>OSKAR is based on **Solution-Focused Brief Therapy (SFBT)** principles. <ul><li>The Scaling Question is a powerful measurement tool to encourage continuous, non-judgmental progress tracking.</li><li>Synthesis: Excellent to pair with the **GROW** model as a replacement for the 'Options' stage, by forcing options to be built on past successes (Know-How).</li></ul>"
+  },
+  {
+    "id": "ikigai",
+    "title": "Ikigai Framework",
+    "focus": "Japanese Purpose Model",
+    "summary": "Finding the intersection of what you love, what you are good at, what the world needs, and what you can be paid for. Crucial for guiding long-term fulfillment.",
+    "relevance": ["Spiritual", "Academic", "Social"],
+    "model_status": {
+      "status": "Popularized/Generalized",
+      "class": "status-revised"
+    },
+    "easy_explanation": "This Japanese concept means 'reason for being.' It helps you find the sweet spot where your passion (what you love) meets your value (what the world needs) and your talents. It’s the ultimate guide for career and life choices.",
+    "process_application": "The traditional Western diagram uses four circles. <strong>Application Steps:</strong> <ol><li>Create four lists: What I Love, What I'm Good At, What the World Needs, and What I Can Be Paid For.</li><li>Identify the overlaps (e.g., Passion = Love + Good At).</li><li>Your <strong>Ikigai</strong> lies at the center where all four lists overlap.</li></ol> <p><strong>Case Use: Entrepreneurship:</strong> An entrepreneur loves art (Love), is good at teaching (Good At), and sees a need for creative outlets for seniors (World Needs). The overlap (Mission/Vocation) guides their business plan, which is sustainable if they charge a fee (Paid For).</p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 3: DEEP GOAL SETTING</div><p>While popularly taught as a four-circle Venn diagram, the true Japanese concept is more about the small, daily joys (<strong>Small Ikigai</strong>). <ul><li>Critique: Western adaptations often over-emphasize the 'paid for' element, leading to career fixation, rather than focusing on the balance between personal fulfillment and collective well-being (the Spiritual element).</li></ul>"
+  },
+  {
+    "id": "stoic",
+    "title": "Stoic Philosophy Pillars",
+    "focus": "Ancient Philosophy",
+    "summary": "Focuses on Wisdom, Temperance, Courage, and Justice. Highly effective principles for building resilience and emotional regulation.",
+    "relevance": ["Mental", "Emotional"],
+    "model_status": {
+      "status": "Historic/High Relevance",
+      "class": "status-historic"
+    },
+    "easy_explanation": "Stoicism is a mindset that teaches you to focus only on what you can control (your thoughts and actions) and accept what you cannot (other people's feelings, the weather, the past). It's a great tool for achieving emotional calm under pressure.",
+    "process_application": "The core practice is the <strong>Dichotomy of Control</strong> (internal vs. external). <strong>Steps:</strong> <ol><li>Identify a source of distress (e.g., job layoff).</li><li>Ask: Is the layoff within my control? (No).</li><li>Focus energy on controllable actions: updating resume, networking (Courage/Temperance).</li><li>Accept the uncontrollable outcome (Apatheia).</li></ol> <strong>Key Practice:</strong> Use journaling to review daily events and classify what was controllable.",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 3: DEEP GOAL SETTING</div><p>The key practice, the <em>Premeditatio Malorum</em>, involves mentally rehearsing worst-case scenarios to reduce their emotional impact when they occur. <ul><li>This cognitive strategy is used in modern <strong>Stress Inoculation Training (SIT)</strong>.</li></ul>"
+  },
+  {
+    "id": "perma",
+    "title": "The PERMA Model",
+    "focus": "Positive Psychology",
+    "summary": "Well-being theory built on Positive Emotions, Engagement, Relationships, Meaning, and Accomplishment. Directly informs our Mental and Emotional resilience planning.",
+    "relevance": ["Mental", "Emotional", "Social"],
+    "model_status": {
+      "status": "Current/Widely Used",
+      "class": "status-current"
+    },
+    "easy_explanation": "PERMA is like a recipe for a happy life with five key ingredients: <strong>P</strong>ositive feelings, <strong>E</strong>ngagement (getting lost in a task), good <strong>R</strong>elationships, a sense of <strong>M</strong>eaning/purpose, and real <strong>A</strong>ccomplishment (success).",
+    "process_application": "PERMA is assessed using a validated survey (the PERMA-Profiler). <strong>Application Strategies:</strong> <ul><li>To boost <strong>Engagement</strong>, use deep work techniques like the Pomodoro method.</li><li>To boost <strong>Meaning</strong>, link daily tasks to a larger purpose (Spiritual pillar).</li></ul> <p><strong>Case Use: Team Morale:</strong> A project team suffering from low morale (low P & R) can dedicate 15 minutes daily to acknowledging small wins (boosting A & P) and host a non-work social lunch once a week (boosting R).</p> The goal is balanced investment across all five elements, not maximizing any one.",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 3: DEEP GOAL SETTING</div><p>PERMA is a <strong>descriptive</strong> model, focusing on measurement over prescription. <strong>Key Metric:</strong> The PERMA Profiler is used to track these five constructs, often showing that <strong>Meaning</strong> and <strong>Relationships</strong> are the most predictive factors for long-term resilience and job satisfaction, overriding purely high <strong>Accomplishment</strong> scores (burnout).</p>"
+  },
+  {
+    "id": "nvc",
+    "title": "Nonviolent Communication (NVC)",
+    "focus": "Relationship Dynamics & Conflict Resolution",
+    "summary": "A four-step process for communicating honestly and empathetically: Observation, Feeling, Need, Request.",
+    "relevance": ["Social", "Emotional"],
+    "model_status": {
+      "status": "Current/Ethical Framework",
+      "class": "status-current"
+    },
+    "easy_explanation": "NVC helps you stay calm and resolve arguments. It teaches you to express your <strong>Needs</strong> without blaming others, leading to clear, peaceful requests instead of demands.",
+    "process_application": "The four steps are: <ul><li><strong>Observation:</strong> State facts, not judgments. ('I see the dishes piled up,' not 'You never clean.')</li><li><strong>Feeling:</strong> Express your feeling. ('I feel frustrated.')</li><li><strong>Need:</strong> State the unmet need. ('Because I need order and support.')</li><li><strong>Request:</strong> Ask for a concrete action. ('Could you please run the dishwasher before bed?').</li></ul> <p><strong>Case Use (Social):</strong> Used in couples counseling or team conflicts to shift dialogue from blame to mutual need recognition, ensuring alignment is maintained in relationships.</p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 4: SUSTAINED ACCOUNTABILITY & REVIEW</div><p>NVC shifts language from evaluation (judgment) to observation and moral reflection. <ul><li>Core Principle: All human behavior stems from attempts to meet universal human needs. NVC provides the linguistic tools to negotiate need-fulfillment without violence (verbal or physical).</li></ul>"
+  },
+  {
+    "id": "bigfive",
+    "title": "The Big Five Personality Traits",
+    "focus": "Psychology",
+    "summary": "Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism. Used for deeper self-analysis and tailoring communication strategies.",
+    "relevance": ["Emotional", "Social", "Mental"],
+    "model_status": {
+      "status": "Current/Gold Standard",
+      "class": "status-current"
+    },
+    "easy_explanation": "These are the five main 'settings' of your personality, like sliders on a sound mixer. Knowing your settings (e.g., if you are high on <strong>Conscientiousness</strong> or <strong>Extraversion</strong>) helps you understand why you react certain ways.",
+    "process_application": "<strong>Application:</strong> <ol><li>Traits are generally measured using validated surveys (e.g., NEO-PI).</li><li>If you are Low in <strong>Conscientiousness</strong> (organized), implement external systems (digital trackers) to compensate.</li><li>If you are High in <strong>Extraversion</strong>, plan work that involves collaboration (Social pillar).</li></ol> <p><strong>Case Use: Team Building:</strong> An HR professional places a highly **Agreeable** and highly **Conscientiousness** employee in a customer-facing role, leveraging their cooperative nature and reliability for success.</p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 4: SUSTAINED ACCOUNTABILITY & REVIEW</div><p>Often referred to as <strong>OCEAN</strong>. Traits are highly stable across the lifespan. <ul><li>Relevance: High <strong>Neuroticism</strong> is often linked to Emotional pillar challenges, while high <strong>Conscientiousness</strong> correlates strongly with success in the Academic and Financial pillars.</li><li>Used by HR for role fit prediction.</li></ul>"
+  },
+  {
+    "id": "domains",
+    "title": "12 Domains of Human Functioning",
+    "focus": "Clinical Psychology",
+    "summary": "Clinical framework used to assess overall mental health domains including cognition, emotion, and life activities.",
+    "relevance": ["All Pillars"],
+    "model_status": {
+      "status": "Current/Clinical Use",
+      "class": "status-current"
+    },
+    "easy_explanation": "This is a detailed, doctor-approved checklist used to make sure every part of a person's life is checked when assessing their overall health. Our six pillars simplify and group these clinical domains for daily action.",
+    "process_application": "<strong>Example Domains:</strong> Cognition (Mental), Emotion (Emotional), Self-Care (Physical/Mental), Major Relationships (Social), and Life Activities (Academic/Financial). <strong>Application:</strong> Clinicians use specific instruments to score impairment in each domain. For self-management, assess your perceived distress in each area to locate the root cause of imbalance. <p><strong>Case Use: Health Crisis:</strong> Following a major stress event, a therapist uses this framework to ensure the patient stabilizes all domains, including Self-Care (eating/sleeping) and Leisure, before attempting to address the core trauma.</p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 4: SUSTAINED ACCOUNTABILITY & REVIEW</div><p>Used heavily in comprehensive behavioral health assessments (e.g., DSM-5). Domains cover self-care, leisure, occupational, and relational functioning. <ul><li>Relevance: Our framework aggregates these detailed clinical domains into six highly accessible, actionable categories for non-clinical self-management.</li></ul>"
+  },
+  {
+    "id": "islamic",
+    "title": "Maqasid al-Shariah & Spiritual Triad",
+    "focus": "Islamic Spiritual Frameworks",
+    "summary": "Principles of preserving faith, intellect, wealth, and life. Used to add depth and ethical guidance to the Spiritual and Financial pillars.",
+    "relevance": ["Spiritual", "Financial"],
+    "model_status": {
+      "status": "Historic/Theological",
+      "class": "status-historic"
+    },
+    "easy_explanation": "This is a high-level, historical system for protecting the most important things in a person's life: their faith, their mind, their family, their wealth, and their physical safety. It provides ancient wisdom for modern financial and spiritual planning.",
+    "process_application": "The five core objectives (<strong>dharuriyyat</strong>) are: <ul><li><em>Din</em> (Faith)</li><li><em>Nafs</em> (Self/Life)</li><li><em>'Aql</em> (Intellect)</li><li><em>Nasl</em> (Family/Progeny)</li><li><em>Mal</em> (Wealth)</li></ul> <strong>Application:</strong> When facing a moral challenge (e.g., an investment risk), the decision that best preserves these five necessities is the ethically sound choice. <p><strong>Case Use: Ethical Investing:</strong> A financial advisor uses Maqasid to screen investments, avoiding options that severely compromise the *Nafs* (life, e.g., harmful products) or *Nasl* (family/future). </p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 4: SUSTAINED ACCOUNTABILITY & REVIEW</div><p>These principles offer a universal framework for ethical decision-making. <ul><li>Relevance: Ensures that success in the Financial pillar is rooted in ethical, long-term well-being and not short-term profit maximization. The concepts of <strong>Ihsan, Iman, and Islam</strong> also provide a structure for spiritual self-perfection.</li></ul>"
+  },
+  {
+    "id": "johari",
+    "title": "The Johari Window",
+    "focus": "Self-awareness Model",
+    "summary": "A technique used to help people better understand their relationship with self and others (Open, Blind, Hidden, Unknown). A core tool for improving Social communication.",
+    "relevance": ["Social", "Emotional"],
+    "model_status": {
+      "status": "Static/Classic Tool",
+      "class": "status-historic"
+    },
+    "easy_explanation": "The Johari Window shows four 'rooms' about yourself. The goal is to expand the <strong>Open Area</strong> (things both you and others know) by asking for feedback and sharing more about yourself.",
+    "process_application": "The four panes are <strong>Open</strong>, <strong>Blind</strong>, <strong>Hidden</strong>, and <strong>Unknown</strong>. <strong>Action:</strong> <ul><li>Giving feedback ('telling') decreases the Hidden Area.</li><li>Soliciting feedback ('asking') decreases the Blind Area.</li></ul> <strong>Application:</strong> Teams and close relationships use this exercise to identify communication barriers and build psychological safety. <p><strong>Case Use: Leadership Development:</strong> A leader receives feedback (decreases Blind Area) that their directness is perceived as rudeness, allowing them to adjust their communication style.</p>",
+    "advanced_concepts": "<div class='phase-heading'>PHASE 4: SUSTAINED ACCOUNTABILITY & REVIEW</div><p>The model explains that self-disclosure ('telling') decreases the Hidden Area, while receiving feedback ('asking') decreases the Blind Area. <ul><li>Relevance: Maximizing the <strong>Open Area</strong> is a key objective in leadership development to improve psychological safety and reduce interpersonal conflict.</li></ul>"
+  }
+]
