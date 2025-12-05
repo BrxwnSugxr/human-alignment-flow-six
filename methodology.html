@@ -1,9 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Methodology — Flow Six Foundation</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="assets/css/methodology.css" />
   </head>
-  <body></body>
+
+  <body class="font-sans antialiased">
+    <div id="mobile-menu-backdrop" onclick="closeMobileMenu()"></div>
+
+    <header
+      class="py-4 bg-white/95 backdrop-blur sticky top-0 z-50 border-b border-gray-200"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 lg:px-6 flex items-center justify-between"
+      >
+        <button
+          id="menu-toggle"
+          class="lg:hidden p-2 rounded-md hover:bg-gray-100"
+          onclick="openMobileMenu()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+
+        <div class="font-semibold text-lg ml-2 lg:ml-0">
+          Flow Six Methodology
+        </div>
+
+        <nav class="text-sm">
+          <a
+            href="index.html"
+            class="text-amber-800 hover:text-slate-800 flex items-center gap-1 transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            Back to Home
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <div id="mobile-menu-drawer" class="lg:hidden border-r border-gray-200">
+      <div class="p-4 border-b">
+        <div class="font-bold text-gray-700">Framework Index</div>
+      </div>
+      <div
+        id="mobile-framework-list"
+        class="flex flex-col overflow-y-auto h-full"
+      ></div>
+    </div>
+
+    <main id="main-content-wrapper" class="w-full max-w-7xl mx-auto">
+      <div
+        id="framework-list-col"
+        class="w-[320px] shrink-0 bg-white border-r border-gray-200 hidden lg:block"
+      >
+        <div id="framework-list" class="flex flex-col"></div>
+      </div>
+
+      <div id="framework-detail-wrapper" class="flex-1 bg-white">
+        <div id="framework-detail" class="max-w-4xl mx-auto p-4 lg:p-8">
+          <h1 class="text-3xl font-extrabold mb-2">The Flow Six Foundation</h1>
+          <p class="muted mb-6">
+            Our model synthesizes principles from these established
+            psychological, spiritual, and performance frameworks. Use this
+            reference for research, study, or advanced application.
+          </p>
+
+          <h2 id="detailTitle" class="text-2xl font-bold mb-2">
+            Select a Framework
+          </h2>
+          <div
+            id="detailFocus"
+            class="text-sm font-semibold text-amber-700 mb-4"
+          ></div>
+
+          <div id="modelStatusTag"></div>
+
+          <div id="levelTabs" class="border-b border-gray-200 mb-6 flex gap-8">
+            <button data-level="simple" class="tab-button active pb-2">
+              Simple Overview
+            </button>
+            <button data-level="process" class="tab-button pb-2">
+              Process & Application
+            </button>
+            <button data-level="advanced" class="tab-button pb-2">
+              Advanced Concepts
+            </button>
+          </div>
+
+          <div id="contentSimple" class="text-base text-gray-700 mb-6">
+            <p>
+              Click any framework on the left (or the menu icon above on mobile)
+              to select a model.
+            </p>
+          </div>
+          <div
+            id="contentProcess"
+            class="text-base text-gray-700 mb-6 hidden"
+          ></div>
+          <div
+            id="contentAdvanced"
+            class="text-base text-gray-700 mb-6 hidden"
+          ></div>
+
+          <div
+            id="detailRelevance"
+            class="text-sm pt-4 border-t border-gray-200"
+          >
+            <h3 class="font-semibold mb-2">Relevance to Flow Six Pillars:</h3>
+            <div id="relevanceTags" class="flex flex-wrap gap-2"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-4 border-t bg-white border-gray-200">
+      <div class="max-w-6xl mx-auto px-6 text-center text-sm muted">
+        &copy; 2025 Human Alignment · Designed for Study and Reference.
+      </div>
+    </footer>
+
+    <script src="assets/js/methodology.js"></script>
+  </body>
 </html>

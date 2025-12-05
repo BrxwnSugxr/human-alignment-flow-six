@@ -1,9 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Human Alignment — Flow Six Model</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body></body>
+
+  <body class="antialiased text-slate-800 bg-cream">
+    <header class="w-full sticky top-0 z-40 backdrop-blur bg-white/40 border-b">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-11 h-11 rounded-xl flex items-center justify-center"
+            style="background: linear-gradient(135deg, #fff6e8, #d4a24a)"
+          >
+            <svg viewBox="0 0 24 24" class="w-5 h-5 fill-slate-900">
+              <path
+                d="M12 2C13 5 16 6 16 10c0 5-8 10-8 10s-2.4-3-2-6c.4-3 2-7 6-12z"
+              />
+            </svg>
+          </div>
+          <div>
+            <div class="font-semibold">Human Alignment</div>
+            <div class="text-xs text-slate-500">Flow Six Model</div>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#elements" class="hover:text-slate-900">Elements</a>
+          <a href="#programs" class="hover:text-slate-900">Programs</a>
+          <a href="methodology.html" class="hover:text-slate-900"
+            >Methodology</a
+          >
+          <button
+            id="startBtn"
+            class="px-4 py-2 rounded-md bg-amber-100 text-amber-800 font-semibold"
+          >
+            Start Diagnostic
+          </button>
+        </nav>
+
+        <div class="md:hidden">
+          <button
+            id="startMobile"
+            class="px-3 py-1 rounded bg-amber-100 text-amber-800 text-sm"
+          >
+            Start
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero relative overflow-hidden hero-gif-bg">
+        <div class="absolute inset-0 bg-black/50 z-0"></div>
+
+        <div class="max-w-6xl mx-auto px-6 py-28 relative z-10">
+          <div
+            class="mx-auto max-w-3xl text-center border-4 border-amber-500 p-8 rounded-xl bg-white/20 backdrop-blur-sm"
+          >
+            <div
+              class="inline-block px-3 py-1 rounded-full bg-white/20 text-xs text-white/90 font-semibold"
+            >
+              NEW · Flow Six Model
+            </div>
+
+            <h1
+              class="mt-6 text-4xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-md"
+            >
+              Rebuild the six core elements of your life
+            </h1>
+            <p class="mt-4 text-lg text-white/90">
+              Find hidden imbalances, stop overcompensating,
+            </p>
+            <p class="mt-4 text-lg text-white/90">
+              Get a clear micro-plan fast.
+            </p>
+
+            <div class="mt-8 flex justify-center gap-4">
+              <button
+                id="cta"
+                class="rounded-full px-8 py-3 font-semibold shadow-lg"
+                style="
+                  background: linear-gradient(90deg, #fff6e8, #d4a24a);
+                  color: #071225;
+                "
+              >
+                Start 5-Minute Diagnostic
+              </button>
+              <a
+                href="methodology.html"
+                class="rounded-full px-5 py-3 border border-white/20 text-white/90"
+                >View Flow Six Framework</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="elements" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="mb-6 text-center">
+          <h2 class="text-3xl font-bold">The 6 Core Elements</h2>
+          <p class="mt-2 text-slate-500 max-w-2xl mx-auto">
+            Click any card to open symptoms & quick actions. Each card maps to a
+            pillar in the Flow Six.
+          </p>
+        </div>
+
+        <div
+          id="pillarsGrid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        ></div>
+      </section>
+
+      <section class="max-w-6xl mx-auto px-6 py-8">
+        <h3 class="text-2xl font-bold text-center mb-6">What our users say</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <blockquote class="bg-white p-6 rounded-xl shadow">
+            "The diagnostic showed my real issue — and the micro-plan worked."
+            <footer class="mt-4 font-semibold text-amber-700">— Sarah</footer>
+          </blockquote>
+          <blockquote class="bg-white p-6 rounded-xl shadow">
+            "Simple, actionable, evidence-based."
+            <footer class="mt-4 font-semibold text-amber-700">— Adam</footer>
+          </blockquote>
+          <blockquote class="bg-white p-6 rounded-xl shadow">
+            "Stopped overcompensating and finally felt aligned."
+            <footer class="mt-4 font-semibold text-amber-700">— Noor</footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <footer class="py-8 border-t bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center text-sm text-slate-500">
+          &copy; 2025 Human Alignment · Flow Six Model
+        </div>
+      </footer>
+    </main>
+
+    <div
+      id="diagModal"
+      class="fixed inset-0 hidden items-center justify-center z-50 bg-black/60"
+    >
+      <div class="bg-white rounded-2xl max-w-3xl w-[95%] p-6 shadow-xl">
+        <div class="flex items-center justify-between">
+          <h3 id="diagTitle" class="text-lg font-bold">
+            Quick Alignment Diagnostic
+          </h3>
+          <button id="closeDiag" class="text-slate-600">Close</button>
+        </div>
+        <p id="diagSubtitle" class="text-sm text-slate-600 mt-2">
+          First, select the element you want to focus on for your 5-minute quiz.
+        </p>
+
+        <div id="selectionScreen" class="mt-4 grid grid-cols-2 gap-4"></div>
+
+        <form
+          id="diagForm"
+          class="mt-4 grid gap-2 max-h-[50vh] overflow-auto pr-2 hidden"
+        ></form>
+
+        <div id="diagSubmitArea" class="mt-4 flex justify-end gap-3 hidden">
+          <button
+            id="submitDiag"
+            class="px-4 py-2 rounded-md font-semibold"
+            style="background: #d4a24a; color: #071225"
+          >
+            Submit Quiz
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="detailModal"
+      class="fixed inset-0 hidden items-center justify-center z-50"
+    >
+      <div class="absolute inset-0 bg-black/50" id="detailBackdrop"></div>
+      <div
+        class="bg-white rounded-2xl max-w-2xl w-[95%] p-6 shadow-xl relative z-10"
+      >
+        <div class="flex items-start justify-between">
+          <div>
+            <div id="modalEmoji" class="text-3xl"></div>
+          </div>
+          <div class="flex-1 pl-4">
+            <div class="flex items-center justify-between">
+              <h3 id="modalTitle" class="text-xl font-bold"></h3>
+              <button id="closeModal" class="text-slate-600">Close</button>
+            </div>
+            <p id="modalSummary" class="text-sm text-slate-600 mt-2"></p>
+
+            <div
+              id="modalScoreWrapper"
+              class="mt-4 p-3 bg-red-50 rounded hidden"
+            >
+              <div class="text-sm font-semibold">
+                Score:
+                <span id="modalScore" class="text-lg font-extrabold">--</span> /
+                100
+              </div>
+              <div class="text-xs text-slate-500">
+                This indicates your current alignment in the selected area.
+              </div>
+            </div>
+
+            <div class="mt-4 grid sm:grid-cols-2 gap-4">
+              <div>
+                <h4 class="font-semibold">Symptoms</h4>
+                <ul
+                  id="modalSymptoms"
+                  class="list-disc ml-5 mt-2 text-sm text-slate-600"
+                ></ul>
+              </div>
+              <div>
+                <h4 class="font-semibold">Quick Actions</h4>
+                <ol
+                  id="modalActions"
+                  class="list-decimal ml-5 mt-2 text-sm text-slate-600"
+                ></ol>
+              </div>
+            </div>
+
+            <div class="mt-6 flex justify-end">
+              <button
+                id="modalPrimary"
+                class="px-4 py-2 rounded-md font-semibold"
+                style="background: #d4a24a; color: #071225"
+              >
+                Coming Soon
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>
